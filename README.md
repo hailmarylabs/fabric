@@ -6,19 +6,33 @@ Fabric is an experimental local tool for Claude Code. It indexes your repo, pres
 
 ## Install
 
-Download `hailmary-fabric-alpha-macos-arm64.tar.gz` and `SHA256SUMS` from Releases.
+Requirements:
+
+- macOS Apple Silicon
+- Claude Code installed
+- Claude Code using the Anthropic API
+
+Works with Claude Code when it is using the Anthropic API. Claude subscription login is not supported. Codex support is planned next.
+
+Download both files from Releases into the same directory:
+
+- `hailmary-fabric-alpha-macos-arm64.tar.gz`
+- `SHA256SUMS`
+
+Run these commands in that download directory:
 
 ```bash
+shasum -a 256 -c SHA256SUMS
 tar -xzf hailmary-fabric-alpha-macos-arm64.tar.gz
 cd hailmary-fabric-alpha-macos-arm64
 shasum -a 256 -c SHA256SUMS
 sh install.sh
-./fabric.dist/fabric claude --repo .
+./fabric.dist/fabric claude --repo /path/to/your/repo
 ```
 
-This alpha is macOS Apple Silicon only. The binary is unsigned and not notarized.
+The first `shasum` checks the downloaded archive. The second `shasum` checks the extracted files.
 
-Run `sh install.sh` before running `./fabric.dist/fabric`. The installer removes quarantine metadata from `./fabric.dist` only. It does not use sudo, edit PATH, or start Claude.
+The binary is unsigned and not notarized. Run `sh install.sh` before running `./fabric.dist/fabric`. The installer removes quarantine metadata from `./fabric.dist` only. It does not use sudo, edit PATH, modify your repo, or start Claude.
 
 ## Safety
 
