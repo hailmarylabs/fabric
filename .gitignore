@@ -1,0 +1,9 @@
+.DS_Store
+*.tar.gz
+SHA256SUMS
+dist/
+build/
+node_modules/
+.env
+.fabric/
+.claude/
