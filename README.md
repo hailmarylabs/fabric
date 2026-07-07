@@ -10,9 +10,8 @@ Requirements:
 
 - macOS Apple Silicon
 - Claude Code installed
-- Claude Code using the Anthropic API
 
-Works with Claude Code when it is using the Anthropic API. Claude subscription login is not supported. Codex support is planned next.
+Works with Claude Code whether it is using the Anthropic API or a Claude subscription (OAuth login) -- both are verified working through the local proxy. Codex support is planned next.
 
 Download both files from Releases into the same directory:
 
